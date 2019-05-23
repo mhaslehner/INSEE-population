@@ -22,20 +22,52 @@ etc. From the second dataset related to education, I only retrieved columns corr
 
 #### II. A first glance at the data - looking for distributions and correlations
 
-For the analysis, I concatenate the columns from the 'education file' with those from the 'income file'. 
-The dataset under consideration results in a matrix containing 28 columns and 96 rows (départements from  
-metropolitan France).
+The columns from the 'education file', concatenated with those from the 'income file', form 
+a matrix containing 28 columns and 96 rows (départements from metropolitan France). Since the values in the different columns have different orders of magnitude, it makes sense to normalize the data for an easier comparison. 
+For each column X, I calculate  <!--- (X-E[X]/sigma(X)) --> 
 
-Since the values in the different columns have very different magnitudes, 
-it makes sense to normalize the data for an easier comparison. 
-I calculate (X-E[X]/sigma(X)), where E and sigma denote the mean and the standard deviation (over the 96 départements), 
-respectively.  
+![equation](http://latex.codecogs.com/gif.latex?norm(X)%3D%5Cfrac%7BX-E[X]%7D%7Bsigma(X)%7D,) 
+
+where E and sigma denote the mean and the standard deviation of the column data (over the 96 départements), respectively.    
+
+The pictures below show some selected scatter plots of different features (columns). Some of them show certain tendencies of clustering or even
+strong linear correlation, such as (Image 2) for the percentage of taxed households and the median living standard.  
+
+![correlim](correlations_14_all_degreuniv_niveaudevie_l.png)  
+
+![correlim](correlations_23_niveauvie_menagesimposes_l.png)
+
+![correlim](correlations_34_partmenagesimposes_pauvrete_l.png)
+
+![correlim](correlations_115_all_degreuniv_revenus_l.png)
+
+![correlim](correlations_213_niveauvie_revenus_l.png)
+
 
 
 
 
 
 #### III. PCA and Clustering
+
+
+![correlim](3Dplot_PCA123_for_extended_file1.png)
+
+
+
+![correlim](PCA1_and_2_for_extended_file.png)
+
+![correlim](PCA1_and_3_for_extended_file.png)
+
+![correlim](PCA2_and_3_for_extended_file.png)
+
+![correlim](Cluster_PCA.png)
+
+![correlim](pygal_test_Socioeconomic_Strength_extendedfile_PCA1.png)
+
+![correlim](pygal_clusters_of_proj_on_PCA.png)
+
+
 
 
 explained variance ratio [0.48658931 0.25103022 0.12192411] 
