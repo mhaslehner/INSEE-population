@@ -123,21 +123,9 @@ onto the surfaces built by the (first three) PCA vector directions.
 
 
 
-#### IV. Clustering and geographic distribution of a socioeconomic strength index 
+#### IV. Geographic distribution of a socioeconomic strength index and Clustering
 
-
-
-1) Applying a hierarchical clustering (with the arbitrary choice of 3 clusters) on the 
-orthogonal projection of the data set onto the first three PCA vectors 
--the matrix on which the clustering is performed is a 2D array of dimension
-(number of features , number of PCA vectors)-  leads to the following graph.  
-
- 
-![correlim](Cluster_PCA.png)
-
-
-
-2) The figure below shows the geographic distribution of a socioeconomic strength 
+1) The figure below shows the geographic distribution of a socioeconomic strength 
 index that we define as being the projection of the data onto the first PCA vector.
 
 This graph clearly shows the regions of socioeconomic wealth in France (especially Paris and the 
@@ -151,6 +139,23 @@ red color, as opposed to other regions in France that are poorer.
 ![correlim](pygal_test_Socioeconomic_Strength_extendedfile_PCA1.png)
 
 
+
+2) Applying a hierarchical clustering (with the arbitrary choice of 3 clusters) on the 
+orthogonal projection of the data set onto the first three PCA vectors 
+-the matrix on which the clustering is performed is a 2D array of dimension
+(number of features , number of PCA vectors)-  leads to the following graph.  
+
+ 
+![correlim](Cluster_PCA.png)
+
+
+
+
+
+3) Performing this clustering (using 3 classes) reveals the 'poorest' -according to the above mentioned
+ socioeconomic indicator- areas (dark color) in France, as opposed to the 'richest' regions (medium color intensity).
+ The large majority of departments cam be classified according to an intermediate socioeconomic strength (intermediate 
+ color intensity).  
 
 ![correlim](pygal_clusters_of_proj_on_PCA.png)
 
